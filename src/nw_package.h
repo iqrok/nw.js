@@ -97,6 +97,9 @@ class NW_EXPORT Package {
   // Read js flags from the package.json if specifed.
   void ReadJsFlags();
 
+  // iqrok - read node args
+  void ReadNodeArgs();
+
   // Convert error info into data url.
   void ReportError(const std::string& title, const std::string& content);
 

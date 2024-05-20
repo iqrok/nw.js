@@ -53,6 +53,8 @@ const char kmWebkit[] = "webkit";
 const char kmWindow[] = "window";
 const char kmChromiumArgs[] = "chromium-args";
 const char kmJsFlags[] = "js-flags";
+// iqrok
+const char kmNodeArgs[] = "node-args";
 
 // Allows only one instance of the app.
 const char kmSingleInstance[] = "single-instance";

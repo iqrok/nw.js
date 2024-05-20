@@ -35,6 +35,8 @@ extern NW_EXPORT const char kmWebkit[];
 extern NW_EXPORT const char kmWindow[];
 extern NW_EXPORT const char kmChromiumArgs[];
 extern NW_EXPORT const char kmJsFlags[];
+// iqrok
+extern NW_EXPORT const char kmNodeArgs[];
 
 extern NW_EXPORT const char kmSingleInstance[];
 

@@ -247,7 +247,8 @@ def generate_target_symbols(platform_name, arch, version):
             'libffmpeg.sym'
         ]
         if flavor in ['sdk', 'nacl']:
-            target['input'].append('nacl_helper.sym')
+            pass
+#            target['input'].append('nacl_helper.sym')
 
         target['folder'] = True
     elif platform_name == 'win':

@@ -377,6 +377,9 @@ bool Package::InitFromPath(const base::FilePath& path_in) {
 
   // Read flags for v8 engine.
   ReadJsFlags();
+  
+  // Read flags for nodejs.
+  ReadNodeArgs();
 
   RelativePathToURI(path_, this->root());
   return true;
@@ -524,6 +527,19 @@ void Package::ReadJsFlags() {
 
   base::CommandLine* command_line = base::CommandLine::ForCurrentProcess();
   command_line->AppendSwitchASCII("js-flags", *flags);
+}
+
+// iqrok
+void Package::ReadNodeArgs() {
+  if (!root()->Find(switches::kmNodeArgs))
+    return;
+
+  std::string* flags = root()->FindString(switches::kmNodeArgs);
+  if (!flags)
+    return;
+
+  base::CommandLine* command_line = base::CommandLine::ForCurrentProcess();
+  command_line->AppendSwitchASCII(switches::kmNodeArgs, *flags);
 }
 
 void Package::ReportError(const std::string& title,
